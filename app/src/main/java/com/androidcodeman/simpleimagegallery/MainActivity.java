@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements itemClickListener
                 String name = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DISPLAY_NAME));
                 String folder = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Media.BUCKET_DISPLAY_NAME));
                 String datapath = cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA));
-
                 //String folderpaths =  datapath.replace(name,"");
                 String folderpaths = datapath.substring(0, datapath.lastIndexOf(folder+"/"));
                 folderpaths = folderpaths+folder+"/";
